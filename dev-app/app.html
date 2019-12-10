@@ -1,0 +1,15 @@
+<template>
+  <require from="./app.css"></require>
+  <div class="${bem('my-component')}">
+    <h2 class="${bem('my-component', 'header')}">Aurelia bem</h2>
+    <p class.bind="bem(null, 'my-component__text')">
+      is a helper utility for generating a set of proper bem classes
+      which can be easily applied to given elements using a class binding.
+    </p>
+    <div>
+      Conditional rendering is possible too
+      <button click.delegate="isActive = !isActive">Toggle hidden text</button>
+      <span class="${bem('my-component', 'text', ['highlighted', !isActive && 'hidden'])}">I'm a hidden text</span>
+    </div>
+  </div>
+</template>
