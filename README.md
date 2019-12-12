@@ -5,13 +5,17 @@ Helper library to work with BEM classes in Aurelia
 ## Usage
 
 ```html
-<div class="${bem('my-component', 'my-element', ['active', 'opaque'])}"></div>
+<div class="${bem('my-component', null, 'light')}">
+  <div class="${bem('my-component', 'my-element', ['active', 'opaque'])}"></div>
+</div>
 ```
 
 results in
 
 ```html
-<div class="my-component my-component__my-element my-component__my-element--active my-component__my-element--opaque"></div>
+<div class="my-component my-component--light">
+  <div class="my-component__my-element my-component__my-element--active my-component__my-element--opaque"></div>
+</div>
 ```
 
 ## Instructions

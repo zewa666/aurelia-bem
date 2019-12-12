@@ -1,6 +1,6 @@
 <template>
   <require from="./app.css"></require>
-  <div class="${bem('my-component')}">
+  <div class="${bem('my-component', '', 'light')}">
     <h2 class="${bem('my-component', 'header')}">Aurelia bem</h2>
     <p class.bind="bem(null, 'my-component__text')">
       is a helper utility for generating a set of proper bem classes
