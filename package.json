@@ -3,10 +3,15 @@
   "description": "An Aurelia plugin project.",
   "version": "0.1.0",
   "repository": {
-    "type": "???",
-    "url": "???"
+    "type": "git",
+    "url": "https://github.com/zewa666/aurelia-bem"
   },
   "license": "MIT",
+  "author": {
+    "email": "zewa666@gmail.com",
+    "name": "Vildan Softic",
+    "url": "https://github.com/zewa666"
+  },
   "devDependencies": {
     "aurelia-bootstrapper": "^2.3.2",
     "aurelia-animator-css": "^1.0.4",
@@ -27,6 +32,7 @@
     "tslint": "^5.13.0",
     "typescript": "^3.1.2",
     "@types/node": "^10.11.6",
+    "gulp-sass": "^4.0.2",
     "browser-sync": "^2.26.3",
     "connect-history-api-fallback": "^1.6.0",
     "debounce": "^1.2.0",

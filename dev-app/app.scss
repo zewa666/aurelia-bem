@@ -1,0 +1,24 @@
+.my-component {
+  display: block;
+  height: 220px;
+  width: 440px;
+  border: 1px solid black;
+  padding: 5px;
+
+  &__header {
+    color: darkcyan;
+  }
+
+  &__text {
+    text-align: justify;
+
+    &--hidden {
+      visibility: hidden;
+    }
+
+    &--highlighted {
+      font-weight: bold;
+    }
+
+  }
+}

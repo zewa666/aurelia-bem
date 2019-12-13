@@ -23,7 +23,7 @@
   "plugin": {
     "source": {
       "js": "src/**/*.ts",
-      "css": "src/**/*.css",
+      "css": "src/**/*.scss",
       "html": "src/**/*.html",
       "json": "src/**/*.json"
     }
@@ -36,8 +36,8 @@
   },
   "cssProcessor": {
     "source": [
-      "dev-app/**/*.css",
-      "src/**/*.css"
+      "dev-app/**/*.scss",
+      "src/**/*.scss"
     ]
   },
   "jsonProcessor": {
