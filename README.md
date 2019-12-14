@@ -18,6 +18,17 @@ results in
 </div>
 ```
 
+## Sample
+
+You will find a sample app inside `dev-app` which gets started with `npm start`. Besides using this plugin it also makes use of:
+
+* StyleLint + StyleLint-Sass
+* The Bem naming convention applied + preconfigured rules for StyleLint
+* Scss with the latest Sass modules feature (@use)
+* The Aurelia task updated to make use of `gulp-dart-sass` as node-sass currently doesn't support the modules feature
+
+> Make sure to have your VSCode updated to the latest November release for proper support of the new Sass feature
+
 ## Instructions
 
 This project is bootstrapped by [aurelia-cli](https://github.com/aurelia/cli).
