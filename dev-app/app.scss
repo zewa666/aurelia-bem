@@ -1,9 +1,9 @@
 .my-component {
+  border: 1px solid black;
   display: block;
   height: 220px;
-  width: 440px;
-  border: 1px solid black;
   padding: 5px;
+  width: 440px;
 
   &__header {
     color: darkcyan;
@@ -19,6 +19,25 @@
     &--highlighted {
       font-weight: bold;
     }
+  }
 
+  &__toggler {
+    &--active {
+      color: red;
+    }
+  }
+
+  &__link {
+    color: green;
+    display: inline-block;
+    margin-top: 5px;
+
+    &:visited {
+      color: yellowgreen;
+    }
+
+    &:hover {
+      color: palevioletred;
+    }
   }
 }

@@ -8,8 +8,11 @@
     </p>
     <div>
       Conditional rendering is possible too
-      <button click.delegate="isActive = !isActive">Toggle hidden text</button>
+      <button click.delegate="isActive = !isActive"
+              class="${bem('my-component', 'toggler', isActive && 'active')}">Toggle hidden text</button>
       <span class="${bem('my-component', 'text', ['highlighted', !isActive && 'hidden'])}">I'm a hidden text</span>
     </div>
+    <a href="https://github.com/zewa666/aurelia-bem"
+       class="${bem('my-component', 'link')}">Read more here</a>
   </div>
 </template>

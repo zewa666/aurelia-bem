@@ -1,0 +1,25 @@
+{
+  "extends": "stylelint-config-recommended-scss",
+  "plugins": [
+		"stylelint-order"
+	],
+  "rules": {
+    "max-nesting-depth": 2,
+    "selector-max-combinators": 0,
+    "selector-max-specificity": [
+      "0,1,0",
+      {
+        "ignoreSelectors": [
+          ":visited",
+          ":active",
+          ":hover"
+        ]
+      }
+    ],
+    "order/order": [
+			"custom-properties",
+			"declarations"
+		],
+		"order/properties-alphabetical-order": true
+  }
+}
