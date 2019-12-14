@@ -25,6 +25,17 @@
     "selector-max-attribute": 0,
     "selector-max-type": 0,
     "selector-max-id": 0,
-    "selector-max-universal": 0
+    "selector-max-universal": 0,
+    "color-named": [
+      "never",
+      {
+        "message": "Use SCSS variables instead of a bespoke color."
+      }
+    ],
+    "color-no-hex": [true,
+      {
+        "message": "Use SCSS variables instead of a hex color."
+      }
+    ]
   }
 }
