@@ -1,14 +1,14 @@
-@import "colors";
+@use "colors";
 
 .my-component {
-  border: 1px solid $border;
+  border: 1px solid colors.$border;
   display: block;
   height: 220px;
   padding: 5px;
   width: 440px;
 
   &__header {
-    color: $header;
+    color: colors.$header;
   }
 
   &__text {
@@ -25,21 +25,21 @@
 
   &__toggler {
     &--active {
-      color: $toggler--active;
+      color: colors.$toggler--active;
     }
   }
 
   &__link {
-    color: $link;
+    color: colors.$link;
     display: inline-block;
     margin-top: 5px;
 
     &:visited {
-      color: $link--visited;
+      color: colors.$link--visited;
     }
 
     &:hover {
-      color: $link--hover;
+      color: colors.$link--hover;
     }
   }
 }
