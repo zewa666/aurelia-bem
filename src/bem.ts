@@ -1,4 +1,4 @@
-import {viewEngineHooks} from 'aurelia-templating';
+import { viewEngineHooks } from 'aurelia-templating';
 
 export function bemClassGenerator(
   block?: string,
@@ -8,22 +8,24 @@ export function bemClassGenerator(
   const result = [];
 
   if (block && !element) {
-    result.push(block);
+    result.push(checkForValidName(block));
   }
 
   if (element) {
+    checkForValidName(element, !block);
     result.push(block ? `${block}__${element}` : element);
   }
 
   function pushModifier(m) {
+    checkForValidName(m);
     if (element) {
-      result.push(
+      result.push((
         block
           ? `${block}__${element}--${m}`
           : `${element}--${m}`
-      );
+      ));
     } else {
-      result.push(`${block}--${m}`);
+      result.push((`${block}--${m}`));
     }
   }
 
@@ -38,7 +40,22 @@ export function bemClassGenerator(
   return result;
 }
 
-function bem(
+
+function checkForValidName(name: string, noBlock = false) {
+  const tester = new RegExp(`[-${noBlock ? "" : "|_"}]{2,}`);
+
+  if (name.match(tester) || name.match(/_{2,}.*_{2,}/)) {
+    console.error(`Usage of invalid separators in given name ${name}`);
+  }
+
+  if (noBlock && !name.includes("__")) {
+    console.error(`Given name ${name} includes no __ and no block provided`);
+  }
+
+  return name;
+}
+
+export function bem(
   block?: string,
   element?: string,
   modifier?: string | string[]) {

@@ -1,4 +1,4 @@
-import { bemClassGenerator } from "../../src/bem";
+import { bemClassGenerator, bem } from "../../src/bem";
 
 describe("the bem class generator", () => {
   describe("called with a block", () => {
@@ -37,7 +37,7 @@ describe("the bem class generator", () => {
 
     it("should return element class as is without block", () => {
       const block = "";
-      const element = "my-element";
+      const element = "my-component__my-element";
       const result = bemClassGenerator(block, element);
       const expected = [element];
 
@@ -74,7 +74,7 @@ describe("the bem class generator", () => {
 
     it("should attach it to the element if no block is present", () => {
       const block = "";
-      const element = "my-element";
+      const element = "root__my-element";
       const modifier = "active";
       const result = bemClassGenerator(block, element, modifier);
       const expected = [element, `${element}--${modifier}`];
@@ -111,5 +111,9 @@ describe("the bem class generator", () => {
 
       expect(result).toEqual(expected);
     });
-  })
+  });
+
+  it("should return a space joined string when calling bem", () => {
+    expect(bem("an", "element", "modifier")).toBe("an__element an__element--modifier");
+  });
 });

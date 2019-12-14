@@ -6,3 +6,5 @@ export function configure(config: FrameworkConfiguration) {
     BemBinder
   ]);
 }
+
+export * from "./bem";
